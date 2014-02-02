@@ -1,4 +1,4 @@
-# Contributing to sails-generate-new
+# Contributing to sails-generate-new-with-mast
 
 
 ## Opening Issues
