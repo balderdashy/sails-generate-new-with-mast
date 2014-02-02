@@ -52,13 +52,14 @@ module.exports = function(grunt) {
     'linker/js/dependencies/mastutil.js',
     'linker/js/socket.io.js',
     'linker/js/dependencies/sails.io.backbone.js',
+    'linker/js/dependencies/connect.js',
 
     // First models
     'linker/js/models/**/*.js',
-    
+
     // Then components
     'linker/js/components/**/*.js',
-    
+
     // Then anything else
     'linker/**/*.js'
   ];
