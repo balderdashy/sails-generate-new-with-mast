@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Sails App (with mast)</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--STYLES-->
+    <!--STYLES END-->
+  </head>
+
+  <body>
+
+  	<div data-region template="App"></div>
+
+
+    <!--TEMPLATES-->
+    <!--TEMPLATES END-->
+
+
+    <!--SCRIPTS-->
+    <!--SCRIPTS END-->
+
+
+    <script type="text/javascript">
+
+     // Load JST templates into Mast.
+    _.each(JST, function (fn, path) {
+      var id = path.match(/\/([^\/]+)\..+$/)[1];
+      Mast.templates[id] = fn;
+    });
+
+    // Raise Mast.
+    Mast.raise();
+    </script>
+
+
+  </body>
+</html>
