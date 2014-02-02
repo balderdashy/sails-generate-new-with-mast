@@ -1,6 +1,6 @@
 ![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
 
-# sails-generate-new
+# sails-generate-new-with-mast
 
 
 A `new` generator for use with the Sails command-line interface.
