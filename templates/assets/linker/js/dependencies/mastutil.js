@@ -5,26 +5,32 @@ Mast.$scope = new Mast.Model({
 });
 
 
+// Set up the API root
+// All URLs built using `api` in the model/collection
+// factories use this as their base.
+Mast.apiRoot = 'http://localhost:1337';
+
+
 
 /**
  * Simple factory to return an instantiated Backbone.Collection
  * (can still access all the things-- see README.md)
  *
  * Good solution for most simple collections.
- * 
+ *
  * @param  {Default} definition
  *         [Optional-- definition for models (schema)]
  * @return {Mast.Collection}
  */
-Mast.Collection.factory = function collectionFactory (definition) {
+Mast.Collection.factory = function collectionFactory(definition) {
 	definition = definition || {};
 
 	// Allow `attributes` to be passed in instead of `defaults`
-	// 
+	//
 	var M = Mast.Model.extend({
 		defaults: definition.defaults || definition.attributes
 	});
-	var C = Mast.Collection.extend(_.extend(definition,{
+	var C = Mast.Collection.extend(_.extend(definition, {
 		model: M
 	}));
 
@@ -38,14 +44,18 @@ Mast.Collection.factory = function collectionFactory (definition) {
  * (can still access all the things-- see README.md)
  *
  * Good solution when you need a simple model by itself (e.g. account).
- * 
+ *
  * @param  {Default} definition
  *         [Optional-- default definition for models (schema)]
  * @return {Mast.Model}
  */
-Mast.Model.factory = function modelFactory (definition) {
+Mast.Model.factory = function modelFactory(definition) {
 	definition = definition || {};
-	if (!definition.urlRoot) {definition.urlRoot = function(){return (Mast.apiRoot || '') + definition.api;}}
+	if (!definition.urlRoot) {
+		definition.urlRoot = function() {
+			return (Mast.apiRoot || '') + definition.api;
+		};
+	}
 
 	// Allow `attributes` to be passed in as our model `defaults`
 	definition.defaults = definition.defaults || definition.attributes;
