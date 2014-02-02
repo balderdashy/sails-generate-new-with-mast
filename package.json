@@ -1,7 +1,7 @@
 {
   "name": "sails-generate-new-with-mast",
   "version": "0.10.0",
-  "description": "Generate a new for Sails.",
+  "description": "Override for `sails new` that sets up a new project w/ Mast.",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha"
@@ -13,7 +13,7 @@
     "generate",
     "plugin"
   ],
-  "author": "balderdashy",
+  "author": "rachaelraygun",
   "license": "MIT",
   "dependencies": {
     "lodash": ">=2.4.x",
