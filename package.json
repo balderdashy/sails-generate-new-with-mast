@@ -18,7 +18,8 @@
   "dependencies": {
     "lodash": ">=2.4.x",
     "merge-defaults": ">=0.1.0",
-    "async": "~0.2.10"
+    "async": "~0.2.10",
+    "fs-extra": "~0.8.1"
   },
   "devDependencies": {
     "sails-generate": "*",
