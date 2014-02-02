@@ -1,6 +1,6 @@
 {
   "name": "sails-generate-new-with-mast",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "description": "Override for `sails new` that sets up a new project w/ Mast.",
   "main": "lib/index.js",
   "scripts": {
