@@ -50,6 +50,8 @@ module.exports = function(grunt) {
     'linker/js/dependencies/mast.min.js',
     'linker/js/dependencies/nameframework.js',
     'linker/js/dependencies/mastutil.js',
+
+    // To turn off socket.io, comment out these 4 lines:
     'linker/js/dependencies/socket.io.js',
     'linker/js/dependencies/sails.io.js',
     'linker/js/dependencies/sails.io.backbone.js',
