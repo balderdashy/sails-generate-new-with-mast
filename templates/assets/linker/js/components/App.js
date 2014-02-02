@@ -37,7 +37,7 @@ Mast.define('App', function() {
 		 */
 
 		events: {
-
+			'click': '!!! yup it works!'
 		},
 
 
