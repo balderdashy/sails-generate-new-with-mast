@@ -43,26 +43,23 @@ module.exports = function(grunt) {
 
   var jsFilesToInject = [
 
-    // Below, as a demonstration, you'll see the built-in dependencies
-    // linked in the proper order order
-
-    // Bring in the socket.io client
-    'linker/js/socket.io.js',
-
-    // then beef it up with some convenience logic for talking to Sails.js
-    'linker/js/sails.io.js',
-
-    // A simpler boilerplate library for getting you up and running w/ an
-    // automatic listener for incoming messages from Socket.io.
-    'linker/js/app.js',
-
+    // Dependencies
     'linker/js/dependencies/jquery.js',
     'linker/js/dependencies/lodash.js',
     'linker/js/dependencies/backbone.js',
     'linker/js/dependencies/mast.min.js',
     'linker/js/dependencies/nameframework.js',
+    'linker/js/dependencies/mastutil.js',
+    'linker/js/socket.io.js',
+    'linker/js/dependencies/sails.io.backbone.js',
 
-    // All of the rest of your app scripts imported here
+    // First models
+    'linker/js/models/**/*.js',
+    
+    // Then components
+    'linker/js/components/**/*.js',
+    
+    // Then anything else
     'linker/**/*.js'
   ];
 
