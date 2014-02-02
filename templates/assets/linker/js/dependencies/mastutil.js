@@ -1,8 +1,7 @@
-
 // Set up simple root scope for convenience
 // (add any global defaults here)
 Mast.$scope = new Mast.Model({
-	foo: 'bar'
+	// ...
 });
 
 
